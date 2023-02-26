@@ -1,0 +1,27 @@
+<div class="form">
+  <div class="input">
+    <input
+      type="text"
+      class="filter"
+      placeholder="Filtra por nombre"
+      [(ngModel)]="moviesFilter"
+    />
+  </div>
+</div>
+<div class="movies">
+  <div
+    *ngFor="let movie of movies | filter : moviesFilter"
+    class="movie"
+    [ngStyle]="
+      movie.year > 2000
+        ? { backgroundColor: 'cornflowerblue' }
+        : { backgroundColor: 'rgb(23, 159, 201)' }
+    "
+  >
+    <h2>{{ movie.title }}</h2>
+    <a routerLink="/detail/{{ movie.id }}"
+      ><img class="image-list" src="{{ movie.img }}"
+    /></a>
+    <p>{{ movie.year }}</p>
+  </div>
+</div>

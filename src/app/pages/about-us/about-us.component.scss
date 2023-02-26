@@ -1,0 +1,36 @@
+.aboutUs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 80px;
+    
+}
+.aboutUs-images{
+    display: flex;
+    margin: 15px;
+}
+img{
+    width: 25px;
+    margin: 10px;
+}
+
+body{
+    text-align: center;
+    align-items: center;
+}
+p{
+    font-size: 20px;
+}
+.aboutUs-title{
+    text-align: center;
+}
+.aboutUs-font{
+    font-size: 30px;
+    font-family: fantasy;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    margin: 30px;
+}

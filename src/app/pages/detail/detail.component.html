@@ -1,0 +1,17 @@
+<div class="main-image">
+
+
+  <div *ngIf="movie" class="movie">
+    <div>
+      <img class="image-list" src="{{ movie.img }}" />
+    </div>
+    <div class="detail">
+      <p class="pTitle">Year:</p> <p>{{ movie.year }}</p>
+      <p class="pTitle">Director:</p> <p>{{ movie.director }}</p>
+      <p class="pTitle">Rating: </p> <p>{{ movie.rating }}</p>
+      <p class="pTitle">Genre:</p>
+      <p *ngFor="let genre of movie.genres">{{ genre }}</p>
+    </div>
+
+  </div>
+</div>

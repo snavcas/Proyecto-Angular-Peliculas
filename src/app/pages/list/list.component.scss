@@ -1,0 +1,50 @@
+.movies{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.movie{
+    width: 350px;
+    height: 450px;
+    border-radius: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+    
+
+
+}
+.image-list{
+    width: 220px;
+    height: 300px;
+    border-radius: 15%;
+}
+
+.main-image{
+    text-align: center;
+    margin-bottom: 85px;
+}
+h2{
+    text-align: center;
+    margin: 20px;
+
+}
+.form{
+    display: flex;
+    justify-content: center;
+}
+.input{
+    margin-bottom: 40px;
+}
+.filter{
+    width: 300px;
+    height: 25px;
+    border-radius: 25px;
+
+}

@@ -1,0 +1,120 @@
+<form
+  *ngIf="movieForm"
+  class="form"
+  (submit)="createNewMovie()"
+  [formGroup]="movieForm"
+  name="movie"
+>
+  <div class="field-container">
+    <input
+      class="form__input"
+      placeholder="Title"
+      type="text"
+      required
+      formControlName="title"
+    />
+    <p
+      *ngIf="!movieForm.get('title')?.valid
+        && movieForm.get('title')?.dirty
+        && movieForm.get('title')?.errors?.['required']
+    "
+      class="input-error"
+    >
+      El valor está requerido
+    </p>
+    
+  </div>
+  <div class="field-container">
+    <input
+      class="form__input"
+      placeholder="Director"
+      type="text"
+      required
+      formControlName="director"
+    />
+    <p
+    *ngIf="!movieForm.get('director')?.valid
+      && movieForm.get('director')?.dirty
+      && movieForm.get('director')?.errors?.['required']
+  "
+    class="input-error"
+  >
+    El valor está requerido
+  </p>
+  </div>
+  <div class="field-container">
+    <input
+      class="form__input"
+      placeholder="Year"
+      type="text"
+      required
+      formControlName="year"
+    />
+    <p
+    *ngIf="!movieForm.get('year')?.valid
+      && movieForm.get('year')?.dirty
+      && movieForm.get('year')?.errors?.['maxlength']
+  "
+    class="input-error"
+  >
+    El valor excede la longitud máxima, 4 carácteres
+  </p>
+  </div>
+  <div class="field-container">
+    <input
+      class="form__input"
+      placeholder="Genres"
+      type="text"
+      required
+      formControlName="genres"
+    />
+  </div>
+  <p
+  *ngIf="!movieForm.get('genres')?.valid
+    && movieForm.get('genres')?.dirty
+    && movieForm.get('genres')?.errors?.['required']
+"
+  class="input-error"
+>
+  El valor está requerido
+</p>
+  <div class="field-container">
+    <input
+      class="form__input"
+      placeholder="Rating"
+      type="text"
+      required
+      formControlName="rating"
+    />
+    <p
+    *ngIf="!movieForm.get('rating')?.valid
+      && movieForm.get('rating')?.dirty
+      && movieForm.get('rating')?.errors?.['required']
+  "
+    class="input-error"
+  >
+    El valor está requerido
+  </p>
+  </div>
+  <div class="field-container">
+    <input
+      class="form__input"
+      placeholder="Img"
+      type="text"
+      required
+      formControlName="img"
+    />
+    <p
+    *ngIf="!movieForm.get('img')?.valid
+      && movieForm.get('img')?.dirty
+      && movieForm.get('img')?.errors?.['required']
+  "
+    class="input-error"
+  >
+    El valor está requerido
+  </p>
+  </div>
+  <button class="form_button" type="submit" [disabled]="!movieForm.valid">
+    Create new movie
+  </button>
+</form>
