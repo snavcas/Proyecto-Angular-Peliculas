@@ -13,7 +13,9 @@ export class FilterPipe implements PipeTransform {
     
       return value.filter((movies) => {
         return movies.title.toLowerCase().includes(name);
+        
       });
     }
+    
   
   }
